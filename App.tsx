@@ -1,16 +1,11 @@
-import React from 'react';
-import SplashScreen from 'react-native-splash-screen';
-import {
-  SafeAreaView,
-
-} from 'react-native';
-import LaunchPage from './component/index';
+import React,{useEffect} from "react";
+import SplashScreen from "react-native-splash-screen";
+import {SafeAreaView,View} from "react-native";
+import ParentRegister from "./component/ParentRegister";
 
 
-
-function App():JSX.Element{
-
-  React.useEffect(()=>{
+function App(){
+  useEffect(()=>{
     
     const unSplashScreen:void = SplashScreen.hide();
     return ()=> unSplashScreen
@@ -18,7 +13,7 @@ function App():JSX.Element{
 
   return (
     <SafeAreaView>
-      <LaunchPage/>
+        <ParentRegister/>
     </SafeAreaView>
   );
 }
