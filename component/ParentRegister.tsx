@@ -17,7 +17,7 @@ const ParentRegister = ():JSX.Element=>{
                      fontFamily:"SemiBold",
                      alignSelf:"center",
                  }}
-                >Leave your email there</Text>
+                >Leave your email Here</Text>
 
                 <View style={{
                     flexDirection:"row",
