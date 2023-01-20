@@ -3,7 +3,7 @@ import {Text,View,Image, TextInput,SafeAreaView,ScrollView} from 'react-native';
 const ImageJPG = require("../src/images/image.jpg");
 
 const ParentRegister = ():JSX.Element=>{
-  
+  const [email,setEmail] = useState('');
   return (
   <>
     <SafeAreaView>
@@ -17,19 +17,7 @@ const ParentRegister = ():JSX.Element=>{
                      fontFamily:"SemiBold",
                      alignSelf:"center",
                  }}
-                >Save the world</Text>
-
-                <Text
-                style={{
-                    fontFamily:"SemiBold",
-                    marginHorizontal:55,
-                    textAlign:'center',
-                    marginTop:5,
-                    opacity:0.4
-                }}
-                >
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
-                </Text>
+                >Leave your email there</Text>
 
                 <View style={{
                     flexDirection:"row",
@@ -44,29 +32,12 @@ const ParentRegister = ():JSX.Element=>{
                 }}>
                     {/* <Icon name="mail" color="#00716F" size={24}/> */}
                     <TextInput 
-                        placeholder="Enter"
-                        value={""}
+                        placeholder="Enter the emails"
+                        onChangeText={setEmail}
+                        value={email}
                         style={{paddingHorizontal:10}}
+                        placeholderTextColor={"gray"}
                     />
-                </View>
-                <View style={{
-                    flexDirection:"row",
-                    alignItems:"center",
-                    marginHorizontal:55,
-                    borderWidth:2,
-                    marginTop:15,
-                    paddingHorizontal:10,
-                    borderColor:"#00716F",
-                    borderRadius:23,
-                    paddingVertical:2
-                }}>
-                    {/* <Icon name="mail" color="#00716F" size={24}/> */}
-                    <TextInput 
-                        style={{paddingHorizontal:10}}
-                    />
-
-                    
-
                 </View>
                 <View style={{
                     marginHorizontal:55,
@@ -84,17 +55,6 @@ const ParentRegister = ():JSX.Element=>{
                       
                     }}>Already a member</Text>
                 </View>
-
-                <Text 
-                
-                onPress={()=>{}}
-                
-                style={{
-                    alignSelf:"center",
-                    color:"#00716F",
-                    fontFamily:"SemiBold",
-                    paddingVertical:30
-                }}>New User</Text>
             </View>
     </SafeAreaView>
   </>
