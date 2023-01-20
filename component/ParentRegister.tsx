@@ -1,15 +1,19 @@
 import React,{useState} from 'react';
-import {Text,View,Image, TextInput,SafeAreaView,ScrollView} from 'react-native';
+import {Text,View,Image, TextInput,SafeAreaView,ScrollView,Dimensions,TouchableOpacity, Pressable} from 'react-native';
 const ImageJPG = require("../src/images/image.jpg");
 
 const ParentRegister = ():JSX.Element=>{
   const [email,setEmail] = useState('');
+  const screenWidth:number = Dimensions.get("screen").width
+  const screenHeight:number = Dimensions.get("screen").height
+
+  const isPortrait = screenHeight > screenWidth;
   return (
   <>
     <SafeAreaView>
     <View style={{backgroundColor:"#FFF",height:"100%"}}>
                 <Image source ={ImageJPG}
-                    style={{width:"100%",height:"43%"}}
+                    style={isPortrait? {width:"100%",height:"43%"}:{width:"100%",maxHeight:"40%"}}
                 />
                 <Text
                  style={{
@@ -55,6 +59,21 @@ const ParentRegister = ():JSX.Element=>{
                       
                     }}>Already a member</Text>
                 </View>
+
+                <Pressable style={{
+                    marginHorizontal:55,
+                    alignItems:"center",
+                    justifyContent:"center",
+                    marginTop:30,
+                    backgroundColor:"#007166",
+                    paddingVertical:10,
+                    borderRadius:23
+                }} onPress={()=>{}}>
+                    <Text style={{
+                        color:"white",
+                        fontFamily:"SemiBold"
+                    }}>Done</Text>
+                </Pressable>
             </View>
     </SafeAreaView>
   </>
