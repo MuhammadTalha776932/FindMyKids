@@ -4,7 +4,7 @@ import {
   SafeAreaView,
 
 } from 'react-native';
-import {LaunchPage} from './component/index';
+import LaunchPage from './component/index';
 
 
 
