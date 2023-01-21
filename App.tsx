@@ -1,7 +1,7 @@
 import React,{useEffect} from "react";
 import SplashScreen from "react-native-splash-screen";
 import {SafeAreaView,View} from "react-native";
-import ParentRegister from "./component/ParentRegister";
+// import ParentRegister from "./component/ParentRegister";
 
 
 function App(){
@@ -13,7 +13,7 @@ function App(){
 
   return (
     <SafeAreaView>
-        <ParentRegister/>
+    
     </SafeAreaView>
   );
 }
