@@ -1,5 +1,32 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Linking } from 'react-native';
+
+
+export const ChooseDevicesScreen = ():JSX.Element => {
+  const navigation = useNavigation();
+
+  const handleNavigation = () =>{
+    navigation.navigate( "LeaveName" as never);
+  }
+
+  return (
+    <View style={styles.container}>
+      <View style={styles.textContainer}>
+        <Text style={styles.text}>Choose the Devices to Step Up</Text>
+      </View>
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity style={styles.button} onPress={handleNavigation}>
+          <Text style={styles.buttonText}>Parent Device</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Child Device</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+};
+
 
 const styles = StyleSheet.create({
   container: {
@@ -30,23 +57,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   }
 });
-
-export const ChooseDevicesScreen = () => {
-  return (
-    <View style={styles.container}>
-      <View style={styles.textContainer}>
-        <Text style={styles.text}>Choose the Devices to Step Up</Text>
-      </View>
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Parent Device</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Child Device</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
-  );
-};
 
 export default ChooseDevicesScreen;
