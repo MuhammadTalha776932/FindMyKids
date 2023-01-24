@@ -2,6 +2,7 @@ import React,{useEffect} from "react";
 import {View} from "react-native";
 import SplashScreen from "react-native-splash-screen";
 // import ParentRegister from "./component/ParentRegister";
+import { NavigationContainer } from "@react-navigation/native";
 import MapsContainer from "./src/component/home/MapsContainer" ;
 
 function App(){
@@ -14,9 +15,11 @@ function App(){
   },[])
 
   return (
-    <View style={{flex:1}}>
-      <MapsContainer/>
-    </View>
+    <NavigationContainer>
+      <View style={{flex:1}}>
+        <MapsContainer/>
+      </View>
+    </NavigationContainer>
   );
 }
 
