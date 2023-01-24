@@ -7,7 +7,8 @@ export const ChooseDevicesScreen = ():JSX.Element => {
   const navigation = useNavigation();
 
   const handleNavigation = () =>{
-    navigation.navigate( "LeaveName" as never);
+    navigation.navigate( "Parent" as never);
+    
   }
 
   return (
