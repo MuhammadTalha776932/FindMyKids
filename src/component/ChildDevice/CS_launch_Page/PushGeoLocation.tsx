@@ -66,7 +66,7 @@ export const PushGeoLocation = () => {
       unsub
     }
 
-  }, [])
+  }, [locations.latitude,locations.longitude])
   return (
     <View style={styles.container}>
       <Text> Current Latitude {locations?.latitude}</Text>

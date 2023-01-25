@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import React,{useState} from 'react';
 import {Text,View,Image, TextInput,SafeAreaView,ScrollView,Dimensions,TouchableOpacity, Pressable} from 'react-native';
-const ImageJPG = require("../../images/registration.jpg");
+const ImageJPG = require("../../../images/registration.jpg");
 
 const ChildInfo = ():JSX.Element=>{
 
