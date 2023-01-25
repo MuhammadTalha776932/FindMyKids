@@ -1,8 +1,11 @@
+import { useNavigation } from '@react-navigation/native';
 import React,{useState} from 'react';
 import {Text,View,Image, TextInput,SafeAreaView,ScrollView,Dimensions,TouchableOpacity, Pressable} from 'react-native';
-const ImageJPG = require("../src/images/image.jpg");
+const ImageJPG = require("../images/registration.jpg");
 
 const ParentRegister = ():JSX.Element=>{
+
+  const navigation = useNavigation();
   const [email,setEmail] = useState('');
   const screenWidth:number = Dimensions.get("screen").width
   const screenHeight:number = Dimensions.get("screen").height
@@ -43,7 +46,7 @@ const ParentRegister = ():JSX.Element=>{
                         placeholderTextColor={"gray"}
                     />
                 </View>
-                <View style={{
+                {/* <View style={{
                     marginHorizontal:55,
                     alignItems:"center",
                     justifyContent:"center",
@@ -58,7 +61,7 @@ const ParentRegister = ():JSX.Element=>{
                     }} onPress={()=>{
                       
                     }}>Already a member</Text>
-                </View>
+                </View> */}
 
                 <Pressable style={{
                     marginHorizontal:55,
@@ -68,7 +71,7 @@ const ParentRegister = ():JSX.Element=>{
                     backgroundColor:"#007166",
                     paddingVertical:10,
                     borderRadius:23
-                }} onPress={()=>{}}>
+                }} onPress={()=>navigation.navigate("MapContainer" as never)}>
                     <Text style={{
                         color:"white",
                         fontFamily:"SemiBold"
