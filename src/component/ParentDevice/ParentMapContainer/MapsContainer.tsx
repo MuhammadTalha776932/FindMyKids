@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { View, StyleSheet, Text } from "react-native";
 import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 import MapViewDirections from 'react-native-maps-directions';
-import { GOOGLE_MAPS_APIKEY } from "../../../APIs_Keys";
+import { GOOGLE_MAPS_APIKEY } from "../../../../APIs_Keys";
 const styles = StyleSheet.create({
   container: {
     ...StyleSheet.absoluteFillObject,
