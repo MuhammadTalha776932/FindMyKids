@@ -6,21 +6,23 @@ import { View, Text, StyleSheet, TouchableOpacity, Linking } from 'react-native'
 export const ChooseDevicesScreen = ():JSX.Element => {
   const navigation = useNavigation();
 
-  const handleNavigation = () =>{
+  const handleParentNavigation = () =>{
     navigation.navigate( "Parent" as never);
-    
   }
 
+  const handleChildNavigation = () =>{
+    navigation.navigate("Child" as never);
+  }
   return (
     <View style={styles.container}>
       <View style={styles.textContainer}>
         <Text style={styles.text}>Choose the Devices to Step Up</Text>
       </View>
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button} onPress={handleNavigation}>
+        <TouchableOpacity style={styles.button} onPress={handleParentNavigation}>
           <Text style={styles.buttonText}>Parent Device</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={handleChildNavigation}>
           <Text style={styles.buttonText}>Child Device</Text>
         </TouchableOpacity>
       </View>
